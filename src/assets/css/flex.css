@@ -1,0 +1,31 @@
+.flex {
+  display: flex;
+}
+.flex_no_ce {
+  display: flex;
+  align-items: center;
+}
+.flex_sa_ce {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex_ce {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex_sb_ce {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex_dc_no_ce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex_dc {
+  display: flex;
+  flex-direction: column;
+}
