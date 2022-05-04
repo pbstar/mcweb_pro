@@ -5,7 +5,7 @@
       <div class="rowbox">
         <div class="rbtop">
           <img src="@/assets/icons/row1.png" alt="" />
-          <span>常用</span>
+          <span>热门常用</span>
         </div>
         <div class="rbmid">
           <Link v-for="(item, index) in list1" :key="index" :data="item"></Link>
@@ -27,7 +27,7 @@
             style="width: 18px; margin: 1px 6px 1px 1px"
             alt=""
           />
-          <span>购物</span>
+          <span>必备站点</span>
         </div>
         <div class="rbmid">
           <Link v-for="(item, index) in list3" :key="index" :data="item"></Link>
@@ -53,7 +53,7 @@
             style="width: 18px; margin: 1px 6px 1px 1px"
             alt=""
           />
-          <span>工具</span>
+          <span>实用工具</span>
         </div>
         <div class="rbmid">
           <Link v-for="(item, index) in list5" :key="index" :data="item"></Link>
@@ -130,6 +130,7 @@ export default {
     border-bottom: 1px solid #ddd;
     display: flex;
     align-items: center;
+    padding-left: 10px;
     img {
       margin-right: 5px;
     }

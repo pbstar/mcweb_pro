@@ -1,22 +1,32 @@
 <template>
   <div class="boxf">
     <div class="box flex_sb_ce">
-      <div class="bleft">
+      <div class="bleft" @click="toHome">
         <span>梦辰小站</span>
       </div>
       <div class="bright">
-        <span @click="toAbout">关于</span>
+        <span :class="$route.name == 'about' ? 'active' : ''" @click="toAbout"
+          >关于</span
+        >
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { ElMessage } from "element-plus";
+// import { ElMessage } from "element-plus";
 export default {
   methods: {
     toAbout() {
-      ElMessage("开发中！");
+      this.$router.push({
+        name: "about",
+      });
+      // ElMessage("开发中！");
+    },
+    toHome() {
+      this.$router.push({
+        name: "nav",
+      });
     },
   },
 };
@@ -33,11 +43,17 @@ export default {
     font-size: 18px;
     line-height: 18px;
     color: #fff;
+    cursor: pointer;
   }
   .bright {
     color: #fff;
     font-size: 14px;
     cursor: pointer;
+    .active {
+      color: #ffd04b;
+      padding: 8px 3px 7px;
+      border-bottom: 1px solid #ffd04b;
+    }
   }
 }
 @media screen and (max-width: 600px) {
@@ -50,6 +66,9 @@ export default {
     }
     .bright {
       font-size: 12px;
+      .active {
+        padding: 4px 2px 5px;
+      }
     }
   }
 }

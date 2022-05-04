@@ -1,17 +1,23 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import nav from '@/views/navPage'
+import { createRouter, createWebHistory } from "vue-router";
+import nav from "@/views/navPage";
+import about from "@/views/aboutPage";
 
 const routes = [
   {
-    path: '/',
-    name: 'nav',
-    component: nav
+    path: "/",
+    name: "nav",
+    component: nav,
   },
-]
+  {
+    path: "/about",
+    name: "about",
+    component: about,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
