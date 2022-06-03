@@ -101,7 +101,7 @@ export default {
       let arr = [1, 2, 3, 4, 5, 6];
       for (let i = 0; i < arr.length; i++) {
         this.$http
-          .get("getLink.php", {
+          .get("get_link.php", {
             type: arr[i],
           })
           .then((res) => {

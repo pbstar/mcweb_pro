@@ -47,7 +47,7 @@ export default {
   methods: {
     getLink() {
       this.$http
-        .get("getLink.php", {
+        .get("get_link.php", {
           type: 0,
         })
         .then((res) => {
